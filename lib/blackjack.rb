@@ -38,6 +38,14 @@ end
 
 def hit?(num)
   # code hit? here
+
+  # valid_input = ["h", "s"]
+  # user_input = get_user_input
+  # until valid_input.include(get_user_input)
+  #   invalid_command
+  #   prompt_user
+  #   input_user = get_user_input
+  # end
   prompt_user
   input = get_user_input
 
@@ -48,7 +56,7 @@ def hit?(num)
   end
 
   if input == "h"
-    deal_card + num
+    num += deal_card
   elsif input == "s"
     num
   end
@@ -72,6 +80,6 @@ def runner
   until card_total > 21
     card_total = hit?(card_total)
     display_card_total(card_total)
-    end_game(card_total)
   end
+  end_game(card_total)
 end
